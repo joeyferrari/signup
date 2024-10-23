@@ -83,7 +83,7 @@ export default function Home() {
               Wash Twice, Pay Once - Receive a Free Laundry Service on Your Second Basket with Every Purchase!
             </h1>
             <p className="text-[#7B7C02] text-xl md:text-2xl text-center mb-12">
-              Generously gift your free basket to a family member, neighbor, or friend—share the love of clean laundry—or keep it for yourself!
+              Generously gift your free basket to a family member, neighbor, or friend&mdash;share the love of clean laundry&mdash;or keep it for yourself!
             </p>
             <div className="flex flex-col md:flex-row items-start justify-between">
               <div ref={formRef} className="md:w-1/2 pr-0 md:pr-8">
@@ -93,7 +93,7 @@ export default function Home() {
                 <p className="text-[#7B7C02] text-lg mb-4 text-center">
                   Fill in your details below to claim your free laundry service:
                 </p>
-                {success && <p className="text-green-600">Thank you! You've been subscribed.</p>}
+                {success && <p className="text-green-600">Thank you! You&apos;ve been subscribed.</p>}
                 {error && <p className="text-red-600">{error}</p>}
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <input
@@ -136,7 +136,7 @@ export default function Home() {
               </div>
               <div className="md:w-1/2 mt-8 md:mt-0">
                 <Image
-                  src="/laundry-image.jpg"  // Make sure to replace this with the correct image name
+                  src="/laundry-image.jpg"  // Ensure this is the correct image name
                   alt="Fresh Laundry"
                   width={500}
                   height={300}

@@ -1,4 +1,3 @@
-// pages/api/mailerlite-subscribe.ts
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -49,8 +48,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     // Success response
     return res.status(200).json({ message: 'Subscription successful' });
-  } catch (error) {
-    // Internal server error response
+  } catch (error: unknown) {
+    // Log the error and return a response with the error
+    console.error('Subscription error:', error);
     return res.status(500).json({ message: 'Internal server error' });
   }
 }
