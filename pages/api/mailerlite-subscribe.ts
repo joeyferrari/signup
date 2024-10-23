@@ -8,6 +8,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const apiKey = process.env.MAILERLITE_API_KEY; // Ensure this is in your .env.local file
   const groupId = process.env.MAILERLITE_GROUP_ID; // Ensure this is in your .env.local file
 
+  // Log the environment variables to check if they're being loaded correctly
+  console.log('MailerLite API Key:', apiKey);  
+  console.log('MailerLite Group ID:', groupId);
+
   // Check if API key and group ID are available
   if (!apiKey || !groupId) {
     return res.status(500).json({ message: 'MailerLite API key or group ID is missing' });
