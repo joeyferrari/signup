@@ -3,6 +3,7 @@
 import { useRef, useState } from 'react';
 import { Shirt } from 'lucide-react';
 import Head from 'next/head'; // Import Head
+import Image from 'next/image'; // Import Next.js Image component
 
 export default function Home() {
   // Create a ref to the form section
@@ -60,7 +61,7 @@ export default function Home() {
         setSuccess(true);
         setFormValues({ firstName: '', lastName: '', email: '' });
       }
-    } catch (err) {
+    } catch {
       setError('Failed to submit, please try again.');
     } finally {
       setLoading(false);
@@ -134,9 +135,11 @@ export default function Home() {
                 </form>
               </div>
               <div className="md:w-1/2 mt-8 md:mt-0">
-                <img
+                <Image
                   src="/laundry-image.jpg"  // Make sure to replace this with the correct image name
                   alt="Fresh Laundry"
+                  width={500}
+                  height={300}
                   className="w-full h-auto rounded-lg"
                 />
               </div>
@@ -149,7 +152,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-8">What Makes Us Your Best Choice?</h2>
             <p className="text-center mb-12 text-lg">
-              We're excited to offer you top-notch laundry services with our state-of-the-art facilities and expert staff.
+              We&apos;re excited to offer you top-notch laundry services with our state-of-the-art facilities and expert staff.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
@@ -163,7 +166,7 @@ export default function Home() {
                 <Shirt className="mx-auto mb-4 h-12 w-12" />
                 <h3 className="text-xl font-bold mb-2">24-Hour Turnaround</h3>
                 <p>
-                  We know your time is valuable. That's why we guarantee a 24-hour turnaround on all laundry services, ensuring you never have to wait long for your freshly cleaned clothes.
+                  We know your time is valuable. That&apos;s why we guarantee a 24-hour turnaround on all laundry services, ensuring you never have to wait long for your freshly cleaned clothes.
                 </p>
               </div>
               <div className="text-center">
@@ -184,7 +187,7 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <p className="text-[#7B7C02] font-bold text-center mb-4">
-                  "Highly Recommend!"
+                  &quot;Highly Recommend!&quot;
                 </p>
                 <p className="text-center mb-4">
                   We use Lux Laundry on a weekly basis and I would highly recommend their service. The app is easy to use. Free pick up and delivery at a competitive and fair price. I wish I had found you sooner!
@@ -195,10 +198,10 @@ export default function Home() {
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <p className="text-[#7B7C02] font-bold text-center mb-4">
-                  "Professional!"
+                  &quot;Professional!&quot;
                 </p>
                 <p className="text-center mb-4">
-                  Prompt, professional pickups/drop offs.  Clothes arrive perfectly clean and perfectly folded.  Their service saves me a lot of time.  I highly recommend them!
+                  Prompt, professional pickups/drop offs. Clothes arrive perfectly clean and perfectly folded. Their service saves me a lot of time. I highly recommend them!
                 </p>
                 <p className="text-center font-bold">
                   <a href="https://www.google.com/search?q=lux+laundry" target="_blank" className="underline">Kevin Kirkwood</a>
@@ -206,7 +209,7 @@ export default function Home() {
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <p className="text-[#7B7C02] font-bold text-center mb-4">
-                  "5 Star Times 10!"
+                  &quot;5 Star Times 10!&quot;
                 </p>
                 <p className="text-center mb-4">
                   This place gets a 5 star times 10. Joey was very helpful, accommodated me at the very last minute. This will for sure continue to receive business from me. Well deserved! Thank you so much Joey, very professional, continue being kind.
