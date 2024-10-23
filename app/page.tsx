@@ -1,7 +1,7 @@
 "use client";  // This tells Next.js that this component is a client-side component
 
 import { useRef, useState } from 'react';
-import { Shirt } from 'lucide-react';
+import { Shirt, Calendar, Truck, Sparkles } from 'lucide-react';
 import Head from 'next/head'; // Import Head
 import Image from 'next/image'; // Import Next.js Image component
 
@@ -142,6 +142,35 @@ export default function Home() {
                   height={300}
                   className="w-full h-auto rounded-lg"
                 />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How it Works Section */}
+        <section className="px-4 py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-12">How it Works</h2>
+            <div className="grid md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <Calendar className="mx-auto mb-4 h-12 w-12 text-[#7B7C02]" />
+                <h3 className="text-xl font-bold mb-2">Schedule Online</h3>
+                <p>Choose pickup and drop-off times that work best for you in our mobile or web app.</p>
+              </div>
+              <div className="text-center">
+                <Truck className="mx-auto mb-4 h-12 w-12 text-[#7B7C02]" />
+                <h3 className="text-xl font-bold mb-2">We Pickup</h3>
+                <p>A delivery agent will pick up your laundry during your scheduled pickup time.</p>
+              </div>
+              <div className="text-center">
+                <Sparkles className="mx-auto mb-4 h-12 w-12 text-[#7B7C02]" />
+                <h3 className="text-xl font-bold mb-2">Expert Cleaning</h3>
+                <p>Sit back and relax. Never worry about laundry or dry cleaning again.</p>
+              </div>
+              <div className="text-center">
+                <Shirt className="mx-auto mb-4 h-12 w-12 text-[#7B7C02]" />
+                <h3 className="text-xl font-bold mb-2">We Deliver</h3>
+                <p>Your clothes come back clean and wrinkle-free on your scheduled drop-off date.</p>
               </div>
             </div>
           </div>
